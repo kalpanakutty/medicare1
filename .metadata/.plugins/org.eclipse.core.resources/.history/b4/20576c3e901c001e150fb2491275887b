@@ -1,0 +1,74 @@
+package registerobject;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Registerpage {
+	@FindBy()
+	public static WebElement Registerhere;
+	
+	@FindBy()
+	public static WebElement Firstname;
+	
+	@FindBy()
+	public static WebElement Lastname;
+	
+	@FindBy()
+	public static WebElement email;
+	
+	@FindBy()
+	public static WebElement contact;
+	
+	@FindBy()
+	public static WebElement passsword;
+	
+	@FindBy()
+	public static WebElement confirmpassword;
+	
+	@FindBy()
+	public static WebElement checkbutton;
+	
+	@FindBy()
+	public static WebElement Nextbilling;
+	
+	//Address
+	@FindBy()
+	public static WebElement Address1;
+	
+	@FindBy()
+	public static WebElement Address2;
+	
+	@FindBy()
+	public static WebElement city;
+	
+	@FindBy()
+	public static WebElement postalcode;
+	
+	@FindBy()
+	public static WebElement state;
+	
+	@FindBy()
+	public static WebElement country;
+	
+	@FindBy()
+	public static WebElement Next;
+	
+	//confirmation
+	@FindBy()
+	public static WebElement confirm;
+	
+	//login
+	@FindBy()
+	public static WebElement login;
+	
+	//details
+	@FindBy()
+	public static WebElement Email;
+	
+	@FindBy()
+	public static WebElement password;
+	
+	@FindBy()
+	public static WebElement button;
+	
+}

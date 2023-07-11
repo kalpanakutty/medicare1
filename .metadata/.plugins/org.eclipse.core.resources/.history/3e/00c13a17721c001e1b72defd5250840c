@@ -1,0 +1,42 @@
+package user_object;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Addtocart {
+	@FindBy()
+	public static WebElement All;
+	
+	@FindBy()
+	public static WebElement addtocart;
+	
+	@FindBy()
+	public static WebElement Quantity;
+	
+	@FindBy()
+	public static WebElement checkout;
+	
+	@FindBy(id="addressLineOne")
+	public static WebElement Addressline1;
+	
+	@FindBy(id="addressLineTwo")
+	public static WebElement Addressline2;
+	
+	@FindBy(id="city")
+	public static WebElement city;
+	
+	@FindBy(id="postalCode")
+	public static WebElement postalcode;
+	
+	@FindBy(id="state")
+	public static WebElement state;
+	
+	@FindBy(id="country")
+	public static WebElement country;
+	
+	@FindBy(name="_eventId_saveAddress")
+	public static WebElement Add;
+	
+	
+
+}

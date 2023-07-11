@@ -1,0 +1,18 @@
+package object;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class launchpage {
+	@Test
+	public  void lauchurl() throws InterruptedException{
+		System.setProperty("webdriver.chrome.Driver","/home/kalpanakutty49g/Downloads/chrome.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://localhost:9001/medicare/");
+		Thread.sleep(5000);
+		
+	
+	}
+
+}

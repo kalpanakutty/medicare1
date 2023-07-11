@@ -1,0 +1,43 @@
+package medicare_testcase;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import medicare_Object.Editingadminobject;
+import medicare_Object.adminloginobject;
+
+public class Editingadmintestcase {
+	@Test
+	public void launchpage(){
+		System.setProperty("webdriver.chrome.driver",
+				"/home/kalpanakutty49g/Downloads/chromedriver.exe"); 
+		WebDriver driver =new ChromeDriver();
+		driver.manage().window().maximize();
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://localhost:9001/medicare/");
+		driver.findElement(By.id("login")).click();
+		Adminlogintestcase adminlogin=new Adminlogintestcase();
+		PageFactory.initElements(driver, adminloginobject.class);
+		adminloginobject.email.sendKeys("vk@gmail.com");
+		adminloginobject.password.sendKeys("admin");
+		adminloginobject.login.click();
+		
+		Editingadmintestcase edit=new Editingadmintestcase();
+		PageFactory.initElements(driver, Editingadminobject.class);
+		Editingadminobject.View.click();
+		//Editingadminobject.Edit.click();
+//		//Removing medicine
+//		Editingadminobject.checkbox.click();
+//		//popup
+//		Editingadminobject.ok.click();
+//		//popup2
+//		Editingadminobject.Successfully.click();
+
+}
+}

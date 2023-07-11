@@ -1,0 +1,52 @@
+package medicare_Object;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import medicare_testcase.Adminlogintestcase;
+
+//Adminlogin
+public class adminloginobject {
+	@FindBy(id="username")
+	public static WebElement email;
+    @FindBy(id ="password")
+	public static WebElement password;
+    @FindBy(xpath=("//*[@id=\"loginForm\"]/div[3]/div/input[2]"))
+	public static WebElement login;
+    //Admin editing
+    @FindBy(id="listProducts")
+    public static WebElement ViewProduct;
+    @FindBy(xpath=("//*[@id=\"productListTable\"]/tbody/tr[1]/td[6]/a[2]"))
+     public static WebElement Edit;
+    //Remove the product
+    @FindBy(xpath=("//*[@id=\"productsTable\"]/tbody/tr[1]/td[7]/label/input"))
+	public static WebElement checkbox;
+    //popoup1
+    @FindBy(xpath=("/html/body/div[3]/div/div/div[3]/button[2]"))
+	public static WebElement ok;
+    //popup2
+    @FindBy(xpath=("/html/body/div[3]/div/div/div[2]/button"))
+	public static WebElement Successfully;
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

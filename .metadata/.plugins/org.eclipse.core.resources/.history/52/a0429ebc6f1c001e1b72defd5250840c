@@ -1,0 +1,61 @@
+package user_testcase;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import user_object.Filterobject;
+import user_object.Loginobject;
+import user_object.Searchobject;
+
+public class Usertestcase {
+	@Test
+	public void launchurl() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver",
+				"/home/kalpanakutty49g/Downloads/chromedriver.exe"); 
+		WebDriver driver =new ChromeDriver();
+		driver.manage().window().maximize();
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://localhost:9001/medicare/");
+		driver.findElement(By.id("login")).click(); 
+		//Login user
+		PageFactory.initElements(driver,Loginobject.class);
+		Thread.sleep(3000);
+		Loginobject.email.sendKeys("kn@gmail.com");
+		Loginobject.password.sendKeys("12345");
+		Thread.sleep(3000);
+		Loginobject.login.click();
+		//search medicine
+		PageFactory.initElements(driver,Searchobject.class);
+		Thread.sleep(3000);
+		Searchobject.ViewProducts.click();
+		Thread.sleep(3000);
+		Searchobject.Search.sendKeys("Diclofenac");
+		Thread.sleep(3000);
+		Searchobject.Search.clear();
+		//Apply filter
+		PageFactory.initElements(driver,Filterobject.class);
+		Searchobject.ViewProducts.click();
+		
+		Thread.sleep(3000);
+		Filterobject.Dropdown.click();
+		Thread.sleep(3000);
+		Filterobject.Dropdown.sendKeys("ALL");
+		Thread.sleep(3000);
+		Searchobject.ViewProducts.click();
+		Thread.sleep(3000);
+		Filterobject.Dropdown.click();
+		Thread.sleep(3000);
+		Filterobject.Dropdown.sendKeys("3 Records");
+		Filterobject.Dropdown.click();
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package medicare_testcase;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import medicare_Object.Launchpage;
+import medicare_Object.adminloginobject;
+
+public class Edit_TC {
+	@Test
+	public static String url = "http://localhost:9001/medicare/";
+	driver.findElement(By.id("login")).click();
+	//admin login
+	Adminlogintestcase adminlogin=new Adminlogintestcase();
+	
+
+
+	
+}

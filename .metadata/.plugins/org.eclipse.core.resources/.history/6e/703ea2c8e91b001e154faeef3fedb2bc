@@ -1,0 +1,19 @@
+package medicare_Object;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Editadminobject {
+
+	
+	@FindBy(xpath="//*[@id=\"productListTable\"]/tbody/tr[1]/td[6]/a[2]")
+	public static WebElement button;
+//	@FindBy(id="name")
+//	public static WebElement Name;
+//	@FindBy(id="quantity")
+//	public static WebElement Quantity;
+//	@FindBy(name="submit")
+//	public static WebElement Save;
+//	
+
+}

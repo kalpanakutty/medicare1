@@ -1,0 +1,94 @@
+package medicare_testcase;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import medicare_Object.Addobject;
+import medicare_Object.Enableobject;
+import medicare_Object.adminloginobject;
+import medicare_Object.editobject;
+public class Adminlogintestcase {
+
+	@Test()
+	public void launchpage() throws InterruptedException{
+		
+		System.setProperty("webdriver.chrome.driver",
+				"/home/kalpanakutty49g/Downloads/chromedriver.exe"); 
+		WebDriver driver =new ChromeDriver();
+		driver.manage().window().maximize();
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://localhost:9001/medicare/");
+		Thread.sleep(3000);
+		driver.findElement(By.id("login")).click();
+		
+		
+//		//Login as Admin
+			
+			PageFactory.initElements(driver, adminloginobject.class);
+			Thread.sleep(3000);
+			adminloginobject.email.sendKeys("vk@gmail.com");
+			adminloginobject.password.sendKeys("admin");
+			Thread.sleep(3000);
+			adminloginobject.login.click();
+	//edit admin		
+			PageFactory.initElements(driver,editobject.class);
+			Thread.sleep(3000);
+			editobject.ViewProducts.click();
+			Thread.sleep(3000);
+			editobject.editbtn.click();
+			Thread.sleep(3000);
+			editobject.name.clear();
+			editobject.name.sendKeys("dolo");
+			Thread.sleep(3000);
+			editobject.Quantity.clear();
+			Thread.sleep(3000);
+			editobject.Quantity.sendKeys("75");
+			Thread.sleep(3000);
+			editobject.save.click();
+			//Add credentials
+			PageFactory.initElements(driver,Addobject.class);
+			Thread.sleep(3000);
+			Addobject.Name.sendKeys("dolo");
+			Thread.sleep(3000);
+			Addobject.Brand.sendKeys("cipla");
+			Thread.sleep(3000);
+			Addobject.Description.sendKeys("used for high temp");
+			Thread.sleep(3000);
+			Addobject.Unitprice.clear();
+			Thread.sleep(3000);
+			Addobject.Unitprice.sendKeys("5");
+			Thread.sleep(3000);
+			Addobject.Quantity.clear();
+			Thread.sleep(3000);
+			Addobject.Quantity.sendKeys("35");
+			Thread.sleep(3000);
+			Addobject.upload.sendKeys("/home/kalpanakutty49g/Downloads/dolo650.jpg");
+			Thread.sleep(3000);
+			Addobject.Category.sendKeys("Antibiotics");
+			Thread.sleep(3000);
+			Addobject.save.click();
+			//Enable and Disable
+			
+			PageFactory.initElements(driver,Enableobject.class);
+			Thread.sleep(3000);
+			Enableobject.ManageProducts.click();
+			Thread.sleep(3000);
+			Enableobject.disable.isSelected();
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+	};
+
+

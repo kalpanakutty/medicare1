@@ -1,0 +1,21 @@
+package medicare_testcase;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import medicare_Object.Launchpage;
+import medicare_Object.adminloginobject;
+
+public class Edit_TC extends Launchpage {
+	public static String url = "http://localhost:9001/medicare/";
+	Adminlogintestcase adminlogin=new Adminlogintestcase();
+	PageFactory.initElements(driver, adminloginobject.class);
+	adminloginobject.email.sendKeys("vk@gmail.com");
+	adminloginobject.password.sendKeys("admin");
+	adminloginobject.login.click();
+
+
+
+	
+}

@@ -1,0 +1,30 @@
+package medicare_testcase;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import medicare_Object.Launchpage;
+import medicare_Object.adminloginobject;
+
+public class Edit_TC extends Launchpage {
+	@Test
+	public void launchpage(){
+		WebDriver driver =new ChromeDriver();
+		driver.get("http://localhost:9001/medicare/");
+	    driver.findElement(By.id("login")).click();  
+};
+
+}
+
+	
+	
+	
+	
+
+
+	

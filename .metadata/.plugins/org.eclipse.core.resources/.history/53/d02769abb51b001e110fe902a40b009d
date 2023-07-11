@@ -1,0 +1,11 @@
+package medicare_testcase;
+
+import medicare_Object.Admin_loginpage_object;
+
+public class Loginpage_admin {
+	public void logindetails() {
+	
+		
+	}
+
+}

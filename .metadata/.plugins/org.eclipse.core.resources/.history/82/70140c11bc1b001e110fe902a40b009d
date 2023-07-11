@@ -1,0 +1,5 @@
+package medicare_Object;
+
+public @interface FindBy {
+
+}

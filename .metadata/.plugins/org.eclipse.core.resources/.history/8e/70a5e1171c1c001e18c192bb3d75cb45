@@ -1,0 +1,9 @@
+package user_object;
+
+public class Searchobject {
+	@FindBy(xpath="//*[@id=\"listProducts\"]/a")
+	public static WebElement ViewProducts;
+	@FindBy(xpath="//*[@id=\"productListTable_filter\"]/label/input")
+	public static WebElement Search;
+
+}

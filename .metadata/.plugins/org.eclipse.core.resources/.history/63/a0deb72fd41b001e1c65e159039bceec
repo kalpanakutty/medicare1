@@ -1,0 +1,19 @@
+package medicare_testcase;
+
+import org.openqa.selenium.support.PageFactory;
+
+import medicare_Object.adminloginobject;
+
+public class Editingadmintestcase {
+	//Editing the products
+	Editingadmintestcase editingadmin=new Editingadmintestcase();
+	PageFactory.initElements(driver, Editingadminobject.class);
+	Editingadminobject.ViewProduct.click();
+	Editingadminobject.Edit.click();
+	//Removing medicine
+	Editingadminobject.checkbox.click();
+	//popup
+	Editingadminobject.ok.click();
+	//popup2
+	Editingadminobject.Successfully.click();
+}

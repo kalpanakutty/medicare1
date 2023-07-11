@@ -1,0 +1,3 @@
+127.0.0.1 - - [11/Jul/2023:06:20:31 +0000] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:06:20:37 +0000] "GET /medicare/cart/checkout?execution=e1s2&_eventId_pay/PMAK-64a7cac668d80500438a2eda-54ca687dbd0a4af77103af54bc684a0c7b&PMAK-64a7cac668d80500438a2eda-54ca687dbd0a4af77103af54bc684a0c7b=apikey HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:06:20:38 +0000] "GET /medicare/login HTTP/1.1" 200 3923
